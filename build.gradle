@@ -1,0 +1,30 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.6.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-integration'
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	implementation 'com.ibm.informix:jdbc:4.50.3'
+	implementation 'com.ibm.informix:ifx-changestream-client:1.0.1'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+	testImplementation 'org.springframework.integration:spring-integration-test'
+	testCompile "org.testcontainers:testcontainers:1.13.0"
+	testImplementation "org.testcontainers:junit-jupiter:1.13.0"
+}
+
+test {
+	useJUnitPlatform()
+}

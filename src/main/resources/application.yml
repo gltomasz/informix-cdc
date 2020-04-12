@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    url: jdbc:informix-sqli://localhost:9088/test:INFORMIXSERVER=informix
+    username: ${IFX_DB_USER:informix}
+    password: ${IFX_DB_PASS:in4mix}
+    hikari:
+      maximum-pool-size: 2
