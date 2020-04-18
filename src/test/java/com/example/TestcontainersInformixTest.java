@@ -94,15 +94,11 @@ class TestcontainersInformixTest {
     }
 
     @After
-    void stopWatcher() throws InterruptedException {
+    void stopWatcher() {
         tableWatcher.deactivate();
     }
     private void updateEventShouldBePublishedOnce() {
         verify(eventPublisher, times(1)).publish(any());
-    }
-
-    private void tableWatcherIsStopped() throws InterruptedException {
-
     }
 
     private void tableWatcherIsActive() {

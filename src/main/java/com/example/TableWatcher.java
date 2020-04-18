@@ -49,6 +49,7 @@ public class TableWatcher {
     }
 
     public void deactivate() {
+        logger.info("Watcher deactivated");
         active = false;
     }
 
