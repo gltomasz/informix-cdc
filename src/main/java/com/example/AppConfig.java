@@ -9,7 +9,7 @@ import javax.sql.DataSource;
 import java.sql.SQLException;
 
 @Configuration
-public class AppConfig {
+class AppConfig {
 
     @Bean
     DataSource dataSource(@Value("${spring.datasource.url}") String url,

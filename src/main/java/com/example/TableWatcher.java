@@ -11,7 +11,7 @@ import javax.sql.DataSource;
 import java.sql.SQLException;
 import java.util.concurrent.Executors;
 
-public class TableWatcher {
+class TableWatcher {
 
     private final Logger logger = LoggerFactory.getLogger(TableWatcher.class);
     private final DataSource dataSource;

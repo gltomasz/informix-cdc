@@ -1,6 +1,6 @@
 package com.example;
 
-public class CdcEvent {
+class CdcEvent {
     private final long sequenceId;
     private final int transactionId;
 
